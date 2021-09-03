@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Bootstrap	</title>
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<h4 th:text="${user.username}"></h4>
+<div th:switch="${user.role}">
+<p th:case="'Admin'"> I am a admin</p>
+<p th:case="'manager'"> I am a manager</p>
+
+</div>
+</div>
+</body>
+</html>
